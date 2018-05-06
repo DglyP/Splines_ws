@@ -43,10 +43,15 @@ void setup() {
   //interpolator = new Interpolator(scene);
 
   // Using OrbitNodes makes path editable
-  for (int i = 0; i < 8; i++) {
+  int n = 8;
+  if (mode == 3) {
+    n = 10;
+  }
+  for (int i = 0; i < n; i++) {
     Node ctrlPoint = new OrbitNode(scene);
     ctrlPoint.randomize();
     interpolator.addKeyFrame(ctrlPoint);
+    println(ctrlPoint.position().x() + ", "+ ctrlPoint.position().y()+ ", "+ ctrlPoint.position().z());
   }
 }
 
@@ -69,8 +74,16 @@ void draw() {
   // implement me
   // draw curve according to control polygon an mode
   // To retrieve the positions of the control points do:
-  // for(Frame frame : interpolator.keyFrames())
-  //   frame.position();
+  ArrayList<Vector> points = new ArrayList<Vector>();
+  for (Frame frame : interpolator.keyFrames()) {
+    points.add(frame.position());
+  }
+  if (mode == 3) {
+
+
+    CurveBezier curve = new CurveBezier(points, 1000);
+    curve.drawCurve();
+  }
 }
 
 void keyPressed() {
