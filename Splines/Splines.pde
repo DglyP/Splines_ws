@@ -83,6 +83,10 @@ void draw() {
     NaturalCubic curveNatural = new NaturalCubic(points, 1000);
     curveNatural.drawCurve();
     break;
+    case 1:
+    CurveHermite curveHermite = new CurveHermite(points, 10000);
+    curveHermite.drawCurve();
+    break;
     case 3:
       CurveBezierCubic curve = new CurveBezierCubic(points, 1000);
     curve.drawCurve();
