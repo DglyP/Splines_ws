@@ -87,6 +87,10 @@ void draw() {
     CurveHermite curveHermite = new CurveHermite(points, 10000);
     curveHermite.drawCurve();
     break;
+    case 2:
+    CurveBezier7 curveBezier7 = new CurveBezier7(points, 10000);
+    curveBezier7.drawCurve();
+    break;
     case 3:
       CurveBezierCubic curve = new CurveBezierCubic(points, 1000);
     curve.drawCurve();
