@@ -26,9 +26,11 @@ boolean drawGrid = true, drawCtrl = true;
 
 //Choose P3D for a 3D scene, or P2D or JAVA2D for a 2D scene
 String renderer = P3D;
+PFont f;
 
 void setup() {
   size(1000, 600, renderer);
+  f = createFont("ROBOTO", 16, true);
   scene = new Scene(this);
   eye = new OrbitNode(scene);
   eye.setDamping(0);
@@ -81,18 +83,30 @@ void draw() {
   switch (mode){
     case 0:
     NaturalCubic curveNatural = new NaturalCubic(points, 1000);
+    textFont(f,16);
+    fill(255,0,0);
+    text(curveNatural.name(),-150,-150);
     curveNatural.drawCurve();
     break;
     case 1:
     CurveHermite curveHermite = new CurveHermite(points, 10000);
+    textFont(f,16);
+    fill(255,0,0);
+    text(curveHermite.name(),-150,-150);
     curveHermite.drawCurve();
     break;
     case 2:
     CurveBezier7 curveBezier7 = new CurveBezier7(points, 10000);
+    textFont(f,16);
+    fill(255,0,0);
+    text(curveBezier7.name(),-150,-150);
     curveBezier7.drawCurve();
     break;
     case 3:
       CurveBezierCubic curve = new CurveBezierCubic(points, 1000);
+    textFont(f,16);
+    fill(255,0,0);
+    text(curve.name(),-150,-150);
     curve.drawCurve();
     break;
   }

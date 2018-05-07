@@ -22,7 +22,27 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+|Carlos A Lopez R|caralopezromUN|
+|Degly S Pava P  |DglyP         |
+
+## Conclusiones
+
+* Una curva puede ser una linea recta si y solo si todos los puntos de control son colineales
+
+* Una curva de Bezier puede ser separada en dos curvas independientes y estas siguen siendo curvas de Bezier
+
+* Mediante la utilización de un algoritmo para construir y justificar una curva de bezier, resulta una curva con las propiedades de un spline y de un bezier
+
+## Referencias
+* Splines :http://www.inf-cr.uclm.es/www/cglez/downloads/docencia/AC/splines.pdf
+
+* caso 0 :https://es.wikipedia.org/wiki/Curva_de_B%C3%A9zier
+
+* caso 1 : https://blog.demofox.org/2015/08/08/cubic-hermite-interpolation/
+
+* caso 2 :https://www.geeksforgeeks.org/cubic-bezier-curve-implementation-in-c/
+
+* caso 3 :https://www.math.ntnu.no/emner/TMA4215/2008h/cubicsplines.pdf
 
 ## Entrega
 
