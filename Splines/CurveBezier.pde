@@ -1,9 +1,9 @@
-public class  CurveBezier implements Curve {
+public class  CurveBezierCubic implements Curve {
 
   private ArrayList<Vector> ctrlPoints;
   private int numberOfPoints;
 
-  public CurveBezier(ArrayList<Vector> ctrlPoints, int numberOfPoints) {
+  public CurveBezierCubic(ArrayList<Vector> ctrlPoints, int numberOfPoints) {
 
     this.ctrlPoints = ctrlPoints;
     this.numberOfPoints = numberOfPoints;

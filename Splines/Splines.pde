@@ -28,7 +28,7 @@ boolean drawGrid = true, drawCtrl = true;
 String renderer = P3D;
 
 void setup() {
-  size(800, 800, renderer);
+  size(1000, 600, renderer);
   scene = new Scene(this);
   eye = new OrbitNode(scene);
   eye.setDamping(0);
@@ -78,12 +78,17 @@ void draw() {
   for (Frame frame : interpolator.keyFrames()) {
     points.add(frame.position());
   }
-  if (mode == 3) {
-
-
-    CurveBezier curve = new CurveBezier(points, 1000);
+  switch (mode){
+    case 0:
+    NaturalCubic curveNatural = new NaturalCubic(points, 1000);
+    curveNatural.drawCurve();
+    break;
+    case 3:
+      CurveBezierCubic curve = new CurveBezierCubic(points, 1000);
     curve.drawCurve();
+    break;
   }
+ 
 }
 
 void keyPressed() {
